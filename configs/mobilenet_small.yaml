@@ -1,0 +1,82 @@
+experiment:
+  name: "mobilenet_small"
+  trainer: "baseline"
+  seed: 42
+
+data:
+  num_workers: 2
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+
+  rustitw_gdrive_id: "1vpDbEpcEOJQDo69S-KP9myssM_VWdlx9"
+  rustitw_target_max_crops: 35000
+
+  hiertext_annotation_url: "https://raw.githubusercontent.com/google-research-datasets/hiertext/70b6620b2b112597d8219e11eee9773a1403827c/gt/validation.jsonl.gz"
+  hiertext_archive_url: "https://open-images-dataset.s3.amazonaws.com/ocr/validation.tgz"
+  hiertext_target_max_crops: 35000
+
+  sources:
+    synthetic_crops:
+      enabled: true
+      max_samples: 20000
+
+    rustitw_crops:
+      enabled: true
+      max_samples: 35000
+
+    hiertext_crops:
+      enabled: true
+      max_samples: 35000
+
+  split:
+    train_ratio: 0.8
+    validation_ratio: 0.1
+    test_ratio: 0.1
+
+synthetic:
+  train_samples: 2048
+  validation_samples: 512
+  languages: [ "ru", "en" ]
+  font_assets_dir: "assets/fonts"
+  min_font_size: 16
+  max_font_size: 48
+
+model:
+  name: "mobilenet_v3_small"
+  pretrained: true
+  input_height: 96
+  input_width: 384
+  dropout: 0.2
+
+augmentation:
+  enabled: true
+
+  rotation_probability: 1.0
+  rotation_std: 20.0
+  rotation_limit: 60.0
+
+  color_jitter_probability: 0.5
+  brightness: 0.2
+  contrast: 0.2
+  saturation: 0.2
+  hue: 0.05
+
+  blur_probability: 0.25
+
+  noise_probability: 0.25
+  noise_std: 0.02
+
+  compression_probability: 0.25
+  compression_quality_min: 70
+  compression_quality_max: 95
+
+  perspective_probability: 0.25
+  perspective_distortion_scale: 0.15
+
+training:
+  batch_size: 32
+  frozen_epochs: 2
+  finetune_epochs: 10
+  frozen_learning_rate: 0.001
+  finetune_learning_rate: 0.0001
+  weight_decay: 0.01
