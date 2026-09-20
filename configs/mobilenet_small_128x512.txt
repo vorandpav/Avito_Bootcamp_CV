@@ -1,0 +1,18 @@
+evice: cuda
+Config: .\configs\mobilenet_small_128x512.yaml
+Frozen epoch 1/2 | train_loss=0.6615 | train_acc=0.5682 | val_loss=0.6347 | val_acc=0.5822 | val_brier=0.2258 | val_score=0.7742
+Frozen epoch 2/2 | train_loss=0.6353 | train_acc=0.5852 | val_loss=0.6121 | val_acc=0.6078 | val_brier=0.2169 | val_score=0.7831
+Finetune epoch 1/10 | train_loss=0.5202 | train_acc=0.6848 | val_loss=0.4464 | val_acc=0.7551 | val_brier=0.1525 | val_score=0.8475
+Finetune epoch 2/10 | train_loss=0.4333 | train_acc=0.7587 | val_loss=0.3899 | val_acc=0.7897 | val_brier=0.1319 | val_score=0.8681
+Finetune epoch 3/10 | train_loss=0.3894 | train_acc=0.7896 | val_loss=0.3616 | val_acc=0.8056 | val_brier=0.1218 | val_score=0.8782
+Finetune epoch 4/10 | train_loss=0.3619 | train_acc=0.8097 | val_loss=0.3426 | val_acc=0.8201 | val_brier=0.1145 | val_score=0.8855
+Finetune epoch 5/10 | train_loss=0.3398 | train_acc=0.8223 | val_loss=0.3172 | val_acc=0.8337 | val_brier=0.1060 | val_score=0.8940
+Finetune epoch 6/10 | train_loss=0.3216 | train_acc=0.8328 | val_loss=0.3055 | val_acc=0.8434 | val_brier=0.1017 | val_score=0.8983
+Finetune epoch 7/10 | train_loss=0.3090 | train_acc=0.8392 | val_loss=0.2999 | val_acc=0.8453 | val_brier=0.0996 | val_score=0.9004
+Finetune epoch 8/10 | train_loss=0.2988 | train_acc=0.8460 | val_loss=0.2871 | val_acc=0.8525 | val_brier=0.0949 | val_score=0.9051
+Finetune epoch 9/10 | train_loss=0.2857 | train_acc=0.8536 | val_loss=0.2842 | val_acc=0.8544 | val_brier=0.0938 | val_score=0.9062
+Finetune epoch 10/10 | train_loss=0.2768 | train_acc=0.8583 | val_loss=0.2762 | val_acc=0.8596 | val_brier=0.0910 | val_score=0.9090
+Best validation score: 0.9090
+Test | loss=0.2772 | accuracy=0.8596 | brier=0.0912 | score=0.9088
+
+Итоговый балл (1 − Brier) = 0.95045071; ошибка Брайера = 0.04954929

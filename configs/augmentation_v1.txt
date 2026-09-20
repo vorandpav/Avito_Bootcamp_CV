@@ -1,0 +1,17 @@
+Device: cuda
+Config: .\configs\augmentation_v1.yaml
+Frozen epoch 1/2 | train_loss=0.6853 | train_acc=0.5439 | val_loss=0.6587 | val_acc=0.5666
+Frozen epoch 2/2 | train_loss=0.6647 | train_acc=0.5618 | val_loss=0.6534 | val_acc=0.5698
+Finetune epoch 1/10 | train_loss=0.5103 | train_acc=0.6911 | val_loss=0.4178 | val_acc=0.7712
+Finetune epoch 2/10 | train_loss=0.3958 | train_acc=0.7837 | val_loss=0.3555 | val_acc=0.8081
+Finetune epoch 3/10 | train_loss=0.3463 | train_acc=0.8167 | val_loss=0.3194 | val_acc=0.8301
+Finetune epoch 4/10 | train_loss=0.3150 | train_acc=0.8349 | val_loss=0.3003 | val_acc=0.8467
+Finetune epoch 5/10 | train_loss=0.2952 | train_acc=0.8479 | val_loss=0.2892 | val_acc=0.8479
+Finetune epoch 6/10 | train_loss=0.2780 | train_acc=0.8575 | val_loss=0.2769 | val_acc=0.8588
+Finetune epoch 7/10 | train_loss=0.2628 | train_acc=0.8672 | val_loss=0.2641 | val_acc=0.8664
+Finetune epoch 8/10 | train_loss=0.2517 | train_acc=0.8736 | val_loss=0.2526 | val_acc=0.8725
+Finetune epoch 9/10 | train_loss=0.2412 | train_acc=0.8796 | val_loss=0.2459 | val_acc=0.8750
+Finetune epoch 10/10 | train_loss=0.2323 | train_acc=0.8850 | val_loss=0.2393 | val_acc=0.8801
+Best validation accuracy: 0.8801 Test | loss=0.2381 | accuracy=0.8836
+
+Итоговый балл (1 − Brier) = 0.95573430; ошибка Брайера = 0.04426570
